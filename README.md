@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Notepad Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+This is a Notepad application built using React. It allows users to:
 
-In the project directory, you can run:
+- Select a font family and variant (weight + italic).
+- Toggle italic style.
+- Edit text with the selected font settings.
+- Save and reset text and font settings.
 
-### `npm start`
+The application dynamically loads fonts from a JSON file and applies them to the text editor based on user selections.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Font Selection:** Choose from a list of available fonts and their variants.
+- **Italic Toggle:** Toggle italic style on or off.
+- **Text Editor:** Edit and style text with the selected fonts.
+- **Save and Reset:** Save the current text and font settings, or reset to default.
+- **Dynamic Font Loading:** Fonts are loaded dynamically from a JSON file.
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To set up the project locally, follow these steps:
 
-### `npm run build`
+1. **Clone the repository:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   git clone <repository-url>
+   cd <repository-directory>
+2. Install dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+  npm install
+```
+Create a fonts.json file in the public directory:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Add your fonts data in the public/fonts.json file. The JSON should be structured as follows:
 
-### `npm run eject`
+```
+{
+  "Font Family 1": {
+    "400": "https://fonts.example.com/400.woff2",
+    "400italic": "https://fonts.example.com/400italic.woff2"
+  },
+  "Font Family 2": {
+    "700": "https://fonts.example.com/700.woff2"
+  }
+}
+```
+3. Start the development server:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm start
+```
+The application will be available at http://localhost:3000.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Usage
+Select Font Family:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Use the dropdown menu to choose a font family from the list.
+Select Variant:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Choose the font weight and style (italic or normal) from the variant dropdown menu.
+Toggle Italic:
 
-## Learn More
+Check or uncheck the italic checkbox to apply or remove italic style.
+Edit Text:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Type your text in the text area. The font styling will be applied dynamically based on your selections.
+Save Settings:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Reset Settings:
 
-### Code Splitting
+Click the "Reset" button to clear the text and reset font settings to default.
+Notes
+Font Compatibility: Ensure that the fonts listed in the fonts.json file are compatible with your React application.
+Error Handling: If you encounter issues with font loading, check the console for error messages and ensure that the URLs in the fonts.json file are correct.
+Contributing
+Feel free to submit issues or pull requests to improve the application. Contributions are welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Happy coding!
