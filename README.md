@@ -26,8 +26,7 @@ To set up the project locally, follow these steps:
 1. **Clone the repository:**
 
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/HariBejju/punt-partners-frontend
 2. Install dependencies:
 
 ```bash
