@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import Zoom from 'react-reveal/Zoom';
-import Fade from 'react-reveal/Fade';
+
 
 const App = () => {
   const [fonts, setFonts] = useState({});
@@ -133,12 +132,9 @@ const App = () => {
 
   return (
     <div className="App">
-    <Zoom>
       <div className="title">
         Notepad lite
       </div>
-      </Zoom>
-      <Fade>
       <div className="controls">
         <label>
           Font Family:
@@ -185,7 +181,6 @@ const App = () => {
         <button onClick={handleSave}>Save</button>
         <button onClick={handleReset}>Reset</button>
       </div>
-      </Fade>
     </div>
   );
 };
